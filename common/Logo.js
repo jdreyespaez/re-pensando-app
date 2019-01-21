@@ -6,7 +6,6 @@ export default class Logo extends React.Component {
         return (
             <View style={styles.container}>
                 <Image
-                    style={styles.logo}
                     source={require('../assets/icon.png')}
                     resizeMode="contain"
                 />
@@ -20,9 +19,5 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-    },
-    logo: {
-        justifyContent: 'center',
-        alignItems: 'center'
     }
 });
