@@ -1,10 +1,11 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { Constants } from 'expo';
+import Logo from '../common/Logo';
 
 export default class RegisterScreen extends React.Component {
     static navigationOptions = {
-      title: 'Registro',
+      header: null,
     };
   
     onPressBack = () => {
@@ -19,13 +20,16 @@ export default class RegisterScreen extends React.Component {
     render() {
       return (
         <View style={styles.container}>
-          <Text style={styles.paragraph} onPress={this.onPressBack}>
-          Aquí el usuario elige si es de COLEGIO o EMPRESA
-          </Text>
-  
-          <Text style={styles.paragraph} onPress={this.onPressProfile}>
-            Registrarme
-          </Text>
+            <Logo />
+            <View style={styles.viewContainer}>
+                <Text style={styles.subtitle}>
+                {`¿El proyecto RE-PENSANDO LA BASURA
+se está desarrollando en?`} 
+                </Text>
+                <Text style={styles.paragraph} onPress={this.onPressProfile}>
+                    Registrarme
+                </Text>
+            </View>
         </View>
       );
     }
@@ -46,7 +50,18 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: 'bold',
         textAlign: 'center',
-    }
+    },
+    viewContainer: {
+        flex: 1,
+        backgroundColor:'white',
+        margin: 10
+    },
+    subtitle: {
+        fontSize: 15,
+        color: 'black',
+        // fontFamily: 'lato-regular',
+        textAlign: 'center'
+    },
 });
   
   
