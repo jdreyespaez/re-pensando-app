@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
 title: {
-    fontSize: 30,
+    fontSize: 25,
     fontWeight: 'bold',
     color: 'black',
     // fontFamily: 'lato-black',
