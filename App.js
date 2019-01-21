@@ -1,10 +1,9 @@
 import * as React from 'react';
 import { Text, View, StyleSheet, Image, Button } from 'react-native';
 import { Constants, Font } from 'expo';
-import {
-  createStackNavigator,
-  createAppContainer,
-} from 'react-navigation';
+import { createStackNavigator, createAppContainer} from 'react-navigation';
+import RegisterScreen from './screens/RegisterScreen';
+import Logo from './common/Logo';
 
 class LoginScreen extends React.Component {
 
@@ -13,20 +12,14 @@ class LoginScreen extends React.Component {
   }
 
   onPress = () => {
-    this.props.navigation.push('HomeScreen');
+    this.props.navigation.push('RegisterScreen');
     /* this.props.navigation.navigate('HomeScreen'); */
   };
 
   render() {
       return (
           <View style={styles.container}>
-              <View style={styles.logoContainer}>
-                  <Image
-                      style={styles.logo}
-                      source={require('./assets/icon.png')}
-                      resizeMode="contain"
-                  />
-              </View>
+              <Logo />
               <View style={styles.viewContainer}>
                   <View style={styles.titleContainer}>
                       <Text style={styles.title}>Bogotá sólo recicla el 15% de su basura.</Text>
@@ -42,35 +35,6 @@ class LoginScreen extends React.Component {
               </View>
           </View>
       )
-  }
-}
-
-class HomeScreen extends React.Component {
-  static navigationOptions = {
-    title: 'Home',
-  };
-
-  onPressBack = () => {
-    this.props.navigation.pop();
-    // this.props.navigation.goBack();
-  };
-
-  onPressProfile = () => {
-    // Send Data
-    this.props.navigation.push('ProfileScreen', { height: "6'2", name: "COLEGIO" });
-  };
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.paragraph} onPress={this.onPressBack}>
-        Aquí el usuario elige si es de COLEGIO o EMPRESA
-        </Text>
-
-        <Text style={styles.paragraph} onPress={this.onPressProfile}>
-          Registrarme
-        </Text>
-      </View>
-    );
   }
 }
 
@@ -97,33 +61,10 @@ class ProfileScreen extends React.Component {
   }
 }
 
-/*
-
-let stack = [];
-
-stack.push(screenA);
-
-// [screenA]
-
-stack.push(screenB);
-
-// [screenA, screenB]
-
-stack.pop();
-
-// [screenA]
-
-*/
-
-/*
- * Provides a way for your app to transition between screens 
- * where each new screen is placed on top of a stack.
- */
-/* Old: = StackNavigator() */
 const MainStackNavigator = createStackNavigator(
   {
     LoginScreen,
-    HomeScreen: HomeScreen,
+    RegisterScreen,
     ProfileScreen: {
       screen: ProfileScreen,
       navigationOptions: ({ navigation }) => ({
@@ -186,21 +127,10 @@ subtitle: {
     // fontFamily: 'lato-regular',
     textAlign: 'center'
 },
-logoContainer: {
-    flex: 1,
-    marginTop: 30
-},
 viewContainer: {
     flex: 1,
     backgroundColor:'white',
     margin: 40
-},
-logo: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    flex: 1,
-    height: undefined, 
-    width: undefined
 },
 buttonContainer: {
     margin: 40,
