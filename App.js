@@ -3,23 +3,10 @@ import { Text, View, StyleSheet, Image, Button } from 'react-native';
 import { Constants, Font } from 'expo';
 import {
   createStackNavigator,
-  createNavigationContainer,
+  createAppContainer,
 } from 'react-navigation';
 
-
-/*
- * Every Screen has this.props.navigation and supports customization with `static navigationOptions = {}`
- */
-
-
 class LoginScreen extends React.Component {
-
-  // componentDidMount(){
-  //   Font.loadAsync({
-  //     'lato-black': require('./assets/fonts/Lato-Black.ttf'),
-  //     'lato-regular': require('./assets/fonts/Lato-Regular.ttf')
-  //   });
-  // };
 
   static navigationOptions = {
     header: null,
@@ -136,7 +123,6 @@ stack.pop();
 const MainStackNavigator = createStackNavigator(
   {
     LoginScreen,
-    // Alternate Variations
     HomeScreen: HomeScreen,
     ProfileScreen: {
       screen: ProfileScreen,
@@ -160,7 +146,7 @@ const MainStackNavigator = createStackNavigator(
 
 // Link the back button on Android and manage the environment.
 
-const NavigationApp = createNavigationContainer(MainStackNavigator);
+const NavigationApp = createAppContainer(MainStackNavigator);
 
 // Export the App
 
