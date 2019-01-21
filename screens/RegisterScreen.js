@@ -23,7 +23,7 @@ export default class RegisterScreen extends React.Component {
             <Logo />
             <View style={styles.viewContainer}>
                 <Text style={styles.subtitle}>
-                ¿El proyecto RE-PENSANDO LA BASURA{"\n"}se está desarrollando en? 
+                ¿El proyecto <Text style={{fontWeight: "bold"}}>RE-PENSANDO LA BASURA</Text>{"\n"}se está desarrollando en? 
                 </Text>
                 <Text style={styles.paragraph} onPress={this.onPressProfile}>
                     Registrarme
