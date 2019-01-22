@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
         margin: 10
     },
     subtitle: {
-        fontSize: 20,
+        fontSize: 15,
         color: 'black',
         // fontFamily: 'lato-regular',
         textAlign: 'center'
