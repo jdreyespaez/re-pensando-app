@@ -25,6 +25,7 @@
     "ios": {
       "supportsTablet": true
     },
-    "description": ""
+    "description": "App that teach how to recicle.",
+    "githubUrl": "https://github.com/jdreyespaez/re-pensando-app"
   }
 }
