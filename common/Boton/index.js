@@ -7,7 +7,14 @@ const { array, string, object, bool, func, any } = PropTypes;
 
 class Boton extends Component {
     static propTypes = {
-        // Se definirán en el Paso 4.
+        // Paso 4: Definir las propiedades que recibirá el botón
+        children: any,
+        danger: bool,
+        info: bool,
+        // Ojo: ViewPropTypes es la nueva forma de nombrarlas antes era View.propTypes
+        style: ViewPropTypes.style,
+        success: bool,
+        onPress: func,
     }
     usarPlantilla() {
         // Se definirá en el Paso 5.
