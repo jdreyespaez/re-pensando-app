@@ -66,6 +66,10 @@ const styles = StyleSheet.create({
         // fontFamily: 'lato-regular',
         textAlign: 'center'
     },
+    // Paso 9: Agregar el estilo btn para que se use como la base de cada uno
+    btn: {
+        margin: 10,
+    },
 });
   
   
