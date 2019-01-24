@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { Constants } from 'expo';
 import Logo from '../common/Logo';
+import Boton from '../common/Boton';
 
 export default class RegisterScreen extends React.Component {
     static navigationOptions = {
