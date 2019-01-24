@@ -17,7 +17,18 @@ class Boton extends Component {
         onPress: func,
     }
     usarPlantilla() {
-        // Se definirá en el Paso 5.
+        // Paso 5: La función que revisa las props y devuelve los estilos correspondientes
+        const { rojo, gris } = this.props;
+
+        if (rojo) {
+            return Rojo;
+        }
+
+        if (gris) {
+            return Gris;
+        }
+
+        return Default;
     }
 
     render() {
