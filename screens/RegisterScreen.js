@@ -30,7 +30,6 @@ export default class RegisterScreen extends React.Component {
                     Registrarme
                 </Text>
                 {/* Paso 8: Definimos el conjunto de Botones que se renderizarán en un componente stateless */}
-                <Boton style={styles.btn}> Botón estándar </Boton>
                 <Boton rojo style={styles.btn}> Botón Rojo </Boton>
                 <Boton gris style={styles.btn}> Botón Gris </Boton>
             </View>
