@@ -34,3 +34,11 @@ const EstilosBasicos = StyleSheet.create({
       color: '#333',
     },
   });
+
+  // Paso 12: Exportando los estilos y plantillas creadas
+export default EstilosBasicos;
+export {
+    Rojo,
+    Gris,
+    Default,
+};
