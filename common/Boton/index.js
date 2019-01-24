@@ -32,7 +32,28 @@ class Boton extends Component {
     }
 
     render() {
-        // Se definirá en el Paso 6.
+        // Paso 6: Con la función usarPlantilla() tomamos los estilos de las props y se aplican a
+        // TouchableOpacity, además vamos a renderizar un label personalizado según el tipo de botón.
+        const plantilla = this.usarPlantilla();
+        const {
+            children,
+            onPress,
+            style,
+        } = this.props;
+
+        return (
+            <TouchableOpacity
+                activeOpacity={0.7}
+                style={[
+                    Base.principal,
+                    plantilla.principal,
+                    style,
+                ]}
+                onPress={onPress}
+            >
+                <Text style={[Base.label, plantilla.label]}>{children}</Text>
+            </TouchableOpacity>
+        );
     }
 };
 
