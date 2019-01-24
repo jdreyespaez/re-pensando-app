@@ -11,3 +11,26 @@ const EstilosBasicos = StyleSheet.create({
     color: '#fff',
   },
 });
+
+// Paso 11: Definir los estilos que llamará la función para cada botón.
+ // Se definirán objetos para cada plantilla, sólo cambiará el color.
+ const Rojo = StyleSheet.create({
+    principal: {
+      backgroundColor: '#e74c3c',
+    },
+  });
+  
+  const Gris = StyleSheet.create({
+    principal: {
+      backgroundColor: '#929292',
+    },
+  });
+  
+  const Default = StyleSheet.create({
+    main: {
+      backgroundColor: 'rgba(0 ,0 ,0, 0)',
+    },
+    label: {
+      color: '#333',
+    },
+  });
