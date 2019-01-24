@@ -7,7 +7,7 @@ const { array, string, object, bool, func, any } = PropTypes;
 
 class Boton extends Component {
     static propTypes = {
-        // Paso 4: Definir las propiedades que recibirá el botón
+        // Paso 4: Definir las propiedades que recibirá el botón y callback function que se usará
         children: any,
         danger: bool,
         info: bool,
