@@ -9,7 +9,7 @@ class Boton extends Component {
     static propTypes = {
         // Se definirán en el Paso 4.
     }
-    getTheme() {
+    usarPlantilla() {
         // Se definirá en el Paso 5.
     }
 
