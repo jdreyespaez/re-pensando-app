@@ -24,11 +24,7 @@ class Boton extends Component {
             return Rojo;
         }
 
-        if (gris) {
-            return Gris;
-        }
-
-        return Default;
+        return Gris;
     }
 
     render() {
