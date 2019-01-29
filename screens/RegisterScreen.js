@@ -26,12 +26,15 @@ export default class RegisterScreen extends React.Component {
                 <Text style={styles.subtitle}>
                 ¿El proyecto <Text style={{fontWeight: "bold"}}>RE-PENSANDO LA BASURA</Text>{"\n"}se está desarrollando en: 
                 </Text>
-                <Text style={styles.paragraph} onPress={this.onPressProfile}>
-                    Registrarme
-                </Text>
                 {/* Paso 8: Definimos el conjunto de Botones que se renderizarán en un componente stateless */}
-                <Boton rojo style={styles.btn}> Botón Rojo </Boton>
-                <Boton gris style={styles.btn}> Botón Gris </Boton>
+                <View style={styles.btnContainer}>    
+                    <Boton 
+                        style={styles.btn} 
+                        onPress={this.onPressProfile}
+                        > Colegio 
+                    </Boton>
+                    <Boton style={styles.btn}> Empresa </Boton>
+                </View>
             </View>
         </View>
       );
@@ -64,6 +67,11 @@ const styles = StyleSheet.create({
         color: 'black',
         // fontFamily: 'lato-regular',
         textAlign: 'center'
+    },
+    btnContainer: {
+        marginTop: 50,
+        marginRight: 40,
+        marginLeft: 40,
     },
     // Paso 9: Agregar el estilo btn para que se use como la base de cada uno
     btn: {

@@ -4,11 +4,13 @@ import { StyleSheet } from 'react-native';
 
 const EstilosBasicos = StyleSheet.create({
   principal: {
-    padding: 10,
+    padding: 20,
     borderRadius: 3,
   },
   label: {
     color: '#fff',
+    textAlign: 'center',
+    fontSize: 20
   },
 });
 
