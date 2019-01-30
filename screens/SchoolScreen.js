@@ -1,27 +1,28 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { Constants } from 'expo';
-
+import Form from '../common/Form';
 
 export default class SchoolScreen extends React.Component {
-  onPress = () => {
-    // Go back to login
-    this.props.navigation.popToTop();
-  };
+    static navigationOptions = {
+        header: null,
+      };
 
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.paragraph}>
-          Formulario de registro 
-        </Text>
+    onPress = () => {
+        // Go back to login
+        this.props.navigation.popToTop();
+    };
 
-        <Text style={styles.paragraph} onPress={this.onPress}>
-          SALIR
-        </Text>
-      </View>
-    );
-  }
+    render() {
+        return (
+        <View style={styles.container}>
+            <Form />
+            <Text style={styles.paragraph} onPress={this.onPress}>
+            SALIR
+            </Text>
+        </View>
+        );
+    }
 }
 
 const styles = StyleSheet.create({
