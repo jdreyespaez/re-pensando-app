@@ -3,6 +3,7 @@ import { Text, View, StyleSheet, Image, Button } from 'react-native';
 import { Constants, Font } from 'expo';
 import { createStackNavigator, createAppContainer} from 'react-navigation';
 import RegisterScreen from './screens/RegisterScreen';
+import CompanyScreen from './screens/CompanyScreen';
 import Logo from './common/Logo';
 
 class LoginScreen extends React.Component {
@@ -13,7 +14,6 @@ class LoginScreen extends React.Component {
 
   onPress = () => {
     this.props.navigation.push('RegisterScreen');
-    /* this.props.navigation.navigate('HomeScreen'); */
   };
 
   render() {
@@ -68,21 +68,16 @@ const MainStackNavigator = createStackNavigator(
     ProfileScreen: {
       screen: ProfileScreen,
       navigationOptions: ({ navigation }) => ({
-        title: 'Perfile para ' + navigation.getParam('name'),
+        title: 'Perfil para ' + navigation.getParam('name'),
+      }),
+    },
+    CompanyScreen: {
+      screen: CompanyScreen,
+      navigationOptions: ({ navigation }) => ({
+        title: 'Perfil para ' + navigation.getParam('name'),
       }),
     },
   },
-  {
-    // initialRouteName: 'HomeScreen',
-    // mode: 'modal',
-    // headerMode: 'float', // screen on android
-    // headerBackTitleVisible: false,
-    // headerTransitionPreset: 'fade-in-place',
-    // headerLayoutPreset: 'left',
-    // cardStyle: {
-    //   backgroundColor: 'orange',
-    // },
-  }
 );
 
 // Link the back button on Android and manage the environment.
