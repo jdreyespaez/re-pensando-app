@@ -24,7 +24,7 @@ const EstilosBasicos = StyleSheet.create({
   
   const Gris = StyleSheet.create({
     principal: {
-      backgroundColor: '#929292',
+      backgroundColor: '#a9a9a9',
     },
   });
   
