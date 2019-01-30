@@ -10,8 +10,6 @@ export default class CompanyScreen extends React.Component {
   };
 
   render() {
-    const height = this.props.navigation.getParam('height');
-    /* Old: this.props.navigation.state.params.height */
     return (
       <View style={styles.container}>
         <Text style={styles.paragraph}>
