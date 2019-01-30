@@ -4,6 +4,7 @@ import { Constants, Font } from 'expo';
 import { createStackNavigator, createAppContainer} from 'react-navigation';
 import RegisterScreen from './screens/RegisterScreen';
 import CompanyScreen from './screens/CompanyScreen';
+import SchoolScreen from './screens/SchoolScreen';
 import Logo from './common/Logo';
 
 class LoginScreen extends React.Component {
@@ -38,35 +39,12 @@ class LoginScreen extends React.Component {
   }
 }
 
-class ProfileScreen extends React.Component {
-  onPress = () => {
-    // Go back to login
-    this.props.navigation.popToTop();
-  };
-
-  render() {
-    const height = this.props.navigation.getParam('height');
-    /* Old: this.props.navigation.state.params.height */
-    return (
-      <View style={styles.container}>
-        <Text style={styles.paragraph}>
-          Formulario de registro 
-        </Text>
-
-        <Text style={styles.paragraph} onPress={this.onPress}>
-          SALIR
-        </Text>
-      </View>
-    );
-  }
-}
-
 const MainStackNavigator = createStackNavigator(
   {
     LoginScreen,
     RegisterScreen,
-    ProfileScreen: {
-      screen: ProfileScreen,
+    SchoolScreen: {
+      screen: SchoolScreen,
       navigationOptions: ({ navigation }) => ({
         title: 'Perfil para ' + navigation.getParam('name'),
       }),
