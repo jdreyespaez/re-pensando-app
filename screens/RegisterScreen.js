@@ -14,10 +14,14 @@ export default class RegisterScreen extends React.Component {
       // this.props.navigation.goBack();
     };
   
-    onPressProfile = () => {
-      // Send Data
-      this.props.navigation.push('ProfileScreen', { height: "6'2", name: "COLEGIO" });
+    onPressSchool = () => {
+        this.props.navigation.push('ProfileScreen', { name: "COLEGIO" });
     };
+
+    onPressCompany = () => {
+        this.props.navigation.push('CompanyScreen', { name: "EMPRESA" });
+      };
+
     render() {
       return (
         <View style={styles.container}>
@@ -30,10 +34,13 @@ export default class RegisterScreen extends React.Component {
                 <View style={styles.btnContainer}>    
                     <Boton 
                         style={styles.btn} 
-                        onPress={this.onPressProfile}
+                        onPress={this.onPressSchool}
                         > Colegio 
                     </Boton>
-                    <Boton style={styles.btn}> Empresa </Boton>
+                    <Boton 
+                        style={styles.btn}
+                        onPress={this.onPressCompany}
+                        > Empresa </Boton>
                 </View>
             </View>
         </View>
@@ -42,8 +49,9 @@ export default class RegisterScreen extends React.Component {
   }
 
 import { useScreens } from 'react-native-screens';
+
 useScreens();
-  
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -65,7 +73,6 @@ const styles = StyleSheet.create({
     subtitle: {
         fontSize: 15,
         color: 'black',
-        // fontFamily: 'lato-regular',
         textAlign: 'center'
     },
     btnContainer: {
