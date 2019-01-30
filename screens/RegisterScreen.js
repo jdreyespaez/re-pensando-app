@@ -15,7 +15,7 @@ export default class RegisterScreen extends React.Component {
     };
   
     onPressSchool = () => {
-        this.props.navigation.push('ProfileScreen', { name: "COLEGIO" });
+        this.props.navigation.push('SchoolScreen', { name: "COLEGIO" });
     };
 
     onPressCompany = () => {
