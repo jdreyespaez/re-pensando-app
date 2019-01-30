@@ -5,7 +5,7 @@ import { StyleSheet } from 'react-native';
 const EstilosBasicos = StyleSheet.create({
   principal: {
     padding: 20,
-    borderRadius: 3,
+    borderRadius: 5,
   },
   label: {
     color: '#fff',
