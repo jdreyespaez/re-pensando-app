@@ -1,9 +1,13 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { Constants } from 'expo';
-
+import CompanyForm from '../common/CompanyForm';
 
 export default class CompanyScreen extends React.Component {
+  static navigationOptions = {
+    header: null,
+  };
+
   onPress = () => {
     // Go back to login
     this.props.navigation.popToTop();
@@ -12,10 +16,7 @@ export default class CompanyScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.paragraph}>
-          Formulario de registro 
-        </Text>
-
+        <CompanyForm />
         <Text style={styles.paragraph} onPress={this.onPress}>
           SALIR
         </Text>
