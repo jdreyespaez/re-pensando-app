@@ -118,6 +118,15 @@ export default class Regform extends React.Component {
                         placeholder='¿En qué barrio vives?'
                     />
                 </View>
+                <View style={styles.inputContainer}>
+                    <Text style={styles.inputTitle}>
+                        CONTRASEÑA
+                    </Text>
+                    <TextInput 
+                        style={styles.textInput}
+                        secureTextEntry={true}
+                    />
+                </View>
             </View>
         );
     }
