@@ -5,9 +5,16 @@ import {
     View,
     TextInput,
     TouchableOpacity,
+    Picker,
 } from 'react-native';
 
 export default class Regform extends React.Component {
+    constructor(){
+        super();
+        this.state={
+            PickerValue:''
+        }
+    };
     render() {
         return (
             <View style={styles.regform}>
@@ -29,6 +36,22 @@ export default class Regform extends React.Component {
                         APELLIDOS
                     </Text>
                     <TextInput style={styles.textInput}/>
+                </View>
+                <View style={styles.inputContainer}>
+                    <Text style={styles.inputTitle}>
+                        ROL
+                    </Text>
+                    <Picker 
+                        style={styles.picker}
+                        selectedValue={this.state.PickerValue}
+                        onValueChange={
+                            (itemValue,itemIndex) => 
+                                this.setState({PickerValue:itemValue})
+                        }
+                    >
+                        <Picker.Item label="Estudiante" value="estudiante" />
+                        <Picker-Item label="Profesor" value="profesor" />
+                    </Picker>
                 </View>
                 <View style={styles.inputContainer}>
                     <Text style={styles.inputTitle}>
@@ -75,8 +98,14 @@ const styles = StyleSheet.create({
         marginTop: 5,
     },
     textInput: {
-        color: '#e74c3c',
+        color: '#000000',
         height: 40,
         marginLeft: 10,
+        marginTop: -5,
+    },
+    picker: {
+        // alignSelf: 'stretch',
+        marginLeft: 10,
+        marginTop: -10,
     }
 });
