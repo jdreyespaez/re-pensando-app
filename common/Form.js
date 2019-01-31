@@ -23,19 +23,31 @@ export default class Regform extends React.Component {
                     <Text style={styles.inputTitle}>
                         NOMBRE COLEGIO
                     </Text>
-                    <TextInput style={styles.textInput}/>
+                    <TextInput 
+                        style={styles.textInput}
+                        keyboardType='default'
+                        placeholder='¿Cuál es tu colegio?'
+                    />
                 </View>
                 <View style={styles.inputContainer}>
                     <Text style={styles.inputTitle}>
                         NOMBRES
                     </Text>
-                    <TextInput style={styles.textInput}/>
+                    <TextInput 
+                        style={styles.textInput}
+                        keyboardType='default'
+                        placeholder='¿Cuáles son tus nombres?'    
+                    />
                 </View>
                 <View style={styles.inputContainer}>
                     <Text style={styles.inputTitle}>
                         APELLIDOS
                     </Text>
-                    <TextInput style={styles.textInput}/>
+                    <TextInput 
+                        style={styles.textInput}
+                        keyboardType='default'
+                        placeholder='¿Cuáles son tus apellidos?'
+                    />
                 </View>
                 <View style={styles.inputContainer}>
                     <Text style={styles.inputTitle}>
@@ -74,7 +86,11 @@ export default class Regform extends React.Component {
                     <Text style={styles.inputTitle}>
                         CORREO
                     </Text>
-                    <TextInput style={styles.textInput}/>
+                    <TextInput 
+                        style={styles.textInput}
+                        keyboardType='email-address'
+                        placeholder='¿Cuál es tu correo electrónico?'
+                    />
                 </View>
                 <View style={styles.inputContainer}>
                     <Text style={styles.inputTitle}>
@@ -96,7 +112,11 @@ export default class Regform extends React.Component {
                     <Text style={styles.inputTitle}>
                         BARRIO
                     </Text>
-                    <TextInput style={styles.textInput}/>
+                    <TextInput 
+                        style={styles.textInput}
+                        keyboardType='default'
+                        placeholder='¿En qué barrio vives?'
+                    />
                 </View>
             </View>
         );
