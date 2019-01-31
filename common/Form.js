@@ -50,7 +50,24 @@ export default class Regform extends React.Component {
                         }
                     >
                         <Picker.Item label="Estudiante" value="estudiante" />
-                        <Picker-Item label="Profesor" value="profesor" />
+                        <Picker.Item label="Profesor" value="profesor" />
+                    </Picker>
+                </View>
+                <View style={styles.inputContainer}>
+                    <Text style={styles.inputTitle}>
+                        CURSO
+                    </Text>
+                    <Picker 
+                        style={styles.picker}
+                        selectedValue={this.state.PickerValue}
+                        onValueChange={
+                            (itemValue,itemIndex) => 
+                                this.setState({PickerValue:itemValue})
+                        }
+                    >
+                        <Picker.Item label="Noveno A" value="noveno-a" />
+                        <Picker.Item label="Noveno B" value="noveno-b" />
+                        <Picker.Item label="Noveno C" value="noveno-c" />
                     </Picker>
                 </View>
                 <View style={styles.inputContainer}>
@@ -58,6 +75,22 @@ export default class Regform extends React.Component {
                         CORREO
                     </Text>
                     <TextInput style={styles.textInput}/>
+                </View>
+                <View style={styles.inputContainer}>
+                    <Text style={styles.inputTitle}>
+                        GÉNERO
+                    </Text>
+                    <Picker 
+                        style={styles.picker}
+                        selectedValue={this.state.PickerValue}
+                        onValueChange={
+                            (itemValue,itemIndex) => 
+                                this.setState({PickerValue:itemValue})
+                        }
+                    >
+                        <Picker.Item label="Masculino" value="masculino" />
+                        <Picker.Item label="Femenino" value="femenino" />
+                    </Picker>
                 </View>
                 <View style={styles.inputContainer}>
                     <Text style={styles.inputTitle}>
