@@ -16,7 +16,7 @@ export default class SchoolScreen extends React.Component {
     render() {
         return (
         <View style={styles.container}>
-            <Form />
+            <Form style={styles.form} />
             <Text style={styles.paragraph} onPress={this.onPress}>
             SALIR
             </Text>
@@ -31,6 +31,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingTop: Constants.statusBarHeight,
     padding: 8,
+  },
+  form: {
+    // flex: 1,
   },
   paragraph: {
     margin: 24,
