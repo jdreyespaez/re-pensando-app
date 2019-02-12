@@ -30,7 +30,6 @@ export default class RegisterScreen extends React.Component {
                 <Text style={styles.subtitle}>
                 ¿El proyecto <Text style={{fontWeight: "bold"}}>RE-PENSANDO LA BASURA</Text>{"\n"}se está desarrollando en: 
                 </Text>
-                {/* Paso 8: Definimos el conjunto de Botones que se renderizarán en un componente stateless */}
                 <View style={styles.btnContainer}>    
                     <Boton 
                         style={styles.btn} 

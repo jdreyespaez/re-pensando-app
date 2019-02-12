@@ -1,5 +1,9 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import {  View, 
+          Text, 
+          StyleSheet,
+          ScrollView,
+        } from 'react-native';
 import { Constants } from 'expo';
 import CompanyForm from '../common/CompanyForm';
 
@@ -15,12 +19,14 @@ export default class CompanyScreen extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <CompanyForm />
-        <Text style={styles.paragraph} onPress={this.onPress}>
-          SALIR
-        </Text>
-      </View>
+      <ScrollView>
+        <View style={styles.container}>
+          <CompanyForm />
+          <Text style={styles.paragraph} onPress={this.onPress}>
+            SALIR
+          </Text>
+        </View>
+      </ScrollView>
     );
   }
 }

@@ -1,5 +1,9 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import {  View, 
+          Text, 
+          StyleSheet,
+          ScrollView,
+        } from 'react-native';
 import { Constants } from 'expo';
 import Form from '../common/Form';
 
@@ -15,19 +19,21 @@ export default class SchoolScreen extends React.Component {
 
     render() {
         return (
-        <View style={styles.container}>
-            <Form style={styles.form} />
-            <Text style={styles.paragraph} onPress={this.onPress}>
+        <ScrollView>
+          <View style={styles.container}>
+          <Form style={styles.form} />
+          <Text style={styles.paragraph} onPress={this.onPress}>
             SALIR
-            </Text>
+          </Text>  
         </View>
+        </ScrollView>
         );
     }
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    //flex: 1,
     justifyContent: 'center',
     paddingTop: Constants.statusBarHeight,
     padding: 8,
