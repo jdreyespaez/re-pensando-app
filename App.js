@@ -5,6 +5,7 @@ import { createStackNavigator, createAppContainer} from 'react-navigation';
 import RegisterScreen from './screens/RegisterScreen';
 import CompanyScreen from './screens/CompanyScreen';
 import SchoolScreen from './screens/SchoolScreen';
+import CongratsScreen from './screens/CongratsScreen';
 import Logo from './common/Logo';
 
 class LoginScreen extends React.Component {
@@ -55,6 +56,7 @@ const MainStackNavigator = createStackNavigator(
         title: 'Perfil para ' + navigation.getParam('name'),
       }),
     },
+    CongratsScreen,
   },
 );
 
