@@ -13,9 +13,13 @@ export default class CompanyScreen extends React.Component {
     header: null,
   };
 
-  onPress = () => {
+  onPressSalir = () => {
     // Go back to login
     this.props.navigation.popToTop();
+  };
+
+  onPressGuardar = () => {
+    this.props.navigation.push('CongratsScreen', { name: "Felicitaciones" });
   };
 
   render() {
@@ -25,13 +29,16 @@ export default class CompanyScreen extends React.Component {
           <CompanyForm />
           <Boton 
             style={styles.btn}
-            onPress={this.onPress}
+            onPress={this.onPressGuardar}
             > Guardar </Boton>  
         </View>
       </ScrollView>
     );
   }
 }
+
+import { useScreens } from 'react-native-screens';
+useScreens();
 
 const styles = StyleSheet.create({
   container: {
