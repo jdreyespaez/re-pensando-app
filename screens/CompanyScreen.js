@@ -6,6 +6,7 @@ import {  View,
         } from 'react-native';
 import { Constants } from 'expo';
 import CompanyForm from '../common/CompanyForm';
+import Boton from '../common/Boton';
 
 export default class CompanyScreen extends React.Component {
   static navigationOptions = {
@@ -22,9 +23,10 @@ export default class CompanyScreen extends React.Component {
       <ScrollView>
         <View style={styles.container}>
           <CompanyForm />
-          <Text style={styles.paragraph} onPress={this.onPress}>
-            SALIR
-          </Text>
+          <Boton 
+            style={styles.btn}
+            onPress={this.onPress}
+            > Guardar </Boton>  
         </View>
       </ScrollView>
     );
@@ -43,5 +45,8 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     textAlign: 'center',
+  },
+  btn: {
+    margin: 10,
   },
 });
