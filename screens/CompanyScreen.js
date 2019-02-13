@@ -19,7 +19,7 @@ export default class CompanyScreen extends React.Component {
   };
 
   onPressGuardar = () => {
-    this.props.navigation.push('CongratsScreen', { name: "Felicitaciones" });
+    this.props.navigation.push('CongratsScreen');
   };
 
   render() {

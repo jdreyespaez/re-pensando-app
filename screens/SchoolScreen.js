@@ -13,10 +13,9 @@ export default class SchoolScreen extends React.Component {
         header: null,
       };
 
-    onPress = () => {
-        // Go back to login
-        this.props.navigation.popToTop();
-    };
+    onPressGuardar = () => {
+        this.props.navigation.push('CongratsScreen');
+      };
 
     render() {
         return (
@@ -25,7 +24,7 @@ export default class SchoolScreen extends React.Component {
           <Form style={styles.form} />
           <Boton 
             style={styles.btn}
-            onPress={this.onPress}
+            onPress={this.onPressGuardar}
             > Guardar </Boton>  
         </View>
         </ScrollView>
