@@ -13,11 +13,6 @@ export default class CompanyScreen extends React.Component {
     header: null,
   };
 
-  onPressSalir = () => {
-    // Go back to login
-    this.props.navigation.popToTop();
-  };
-
   onPressGuardar = () => {
     this.props.navigation.push('CongratsScreen');
   };
