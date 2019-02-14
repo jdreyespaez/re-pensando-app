@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, TouchableHighlight } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { Constants } from 'expo';
 
 export default class CongratsScreen extends React.Component {
@@ -34,14 +34,14 @@ export default class CongratsScreen extends React.Component {
                         <Text style={{textAlign: 'center'}}>¡No te lo pierdas!</Text>
                         </Text>
                     </View>
-                    <TouchableHighlight style={styles.dotsContainer}
+                    <TouchableOpacity style={styles.dotsContainer}
                         onPress={this.onPressSiguiente}
                         >
                         <Image
                             source={require('../assets/unoDeDos.png')}
                             resizeMode="contain"
                         />
-                    </TouchableHighlight>
+                    </TouchableOpacity>
                 </View>
             </ScrollView>
         )
