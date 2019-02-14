@@ -2,14 +2,13 @@ import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 import { Constants } from 'expo';
 
-export default class CongratsScreen extends React.Component {
+export default class HowToScreen extends React.Component {
     static navigationOptions = {
         header: null,
     };
 
     onPressSiguiente = () => {
         this.props.navigation.push('HowToScreen');
-        console.log('Siguiente pantalla');
     };
 
     render() {

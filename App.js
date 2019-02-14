@@ -6,6 +6,7 @@ import RegisterScreen from './screens/RegisterScreen';
 import CompanyScreen from './screens/CompanyScreen';
 import SchoolScreen from './screens/SchoolScreen';
 import CongratsScreen from './screens/CongratsScreen';
+import HowToScreen from './screens/HowToScreen';
 import Logo from './common/Logo';
 
 class LoginScreen extends React.Component {
@@ -57,6 +58,7 @@ const MainStackNavigator = createStackNavigator(
       }),
     },
     CongratsScreen,
+    HowToScreen,
   },
 );
 
