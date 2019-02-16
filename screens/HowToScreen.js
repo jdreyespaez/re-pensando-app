@@ -16,7 +16,22 @@ export default class HowToScreen extends React.Component {
             <ScrollView>
                 <View style={styles.container}>
                     <View style={styles.titleContainer}>
-                        <Text style={styles.title}>¡Felicitaciones estás registrado!</Text>
+                        <Text style={styles.title}>¿Cómo funciona esta App?</Text>
+                    </View>
+                    <View style={styles.textContainer}>
+                        <Text style={styles.text}>
+                        1. Selecciona de las categorías que tenemos, el tipo de producto o material que deseas registrar.{"\n"}
+                        {"\n"}
+                        2. La aplicación te dará las pautas para clasificar y disponer correctamente tus residuos para que <Text style={{textDecorationLine: 'underline'}}>no sean conviertan en basura</Text>. {"\n"}
+                        {"\n"}
+                        3. Si registras tus residuos, la aplicación realizará semanalmente un gráfico estadístico de estos, donde podrás identificar cuales produces en mayor y menor medida. {"\n"}
+                        </Text>
+                        <View style={styles.imageContainer}>
+                            <Image
+                                source={require('../assets/graficaResiduos.png')}
+                                resizeMode="contain"
+                            />
+                        </View>
                     </View>
                     <View style={styles.imageContainer}>
                         <Image
@@ -24,18 +39,16 @@ export default class HowToScreen extends React.Component {
                             resizeMode="contain"
                         />
                     </View>
-                    <View style={styles.textContainer}>
-                        <Text style={styles.text}>
-                        Esta APP es una herramienta interactiva que te va indicar como disponer correctamente tus residuos. {"\n"}
-                        {"\n"}
-                        Además, a través de ella puedes registrarlos, esto habilitará semanalmente una sección de la atrevida historia gráfica <Text style={{fontWeight: "bold"}}>"INSINUACIÓN"</Text>. {"\n"}
-                        {"\n"}
-                        <Text style={{textAlign: 'center'}}>¡No te lo pierdas!</Text>
-                        </Text>
+                    <View style={styles.dotsContainer}>
+                        <Image
+                            source={require('../assets/masmas.png')}
+                            onPress={this.onPressSiguiente}
+                            resizeMode="contain"
+                        />
                     </View>
                     <View style={styles.dotsContainer}>
                         <Image
-                            source={require('../assets/unoDeDos.png')}
+                            source={require('../assets/dosDeDos.png')}
                             onPress={this.onPressSiguiente}
                             resizeMode="contain"
                         />
@@ -81,5 +94,9 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         marginTop: 20,
+    },
+    imageContainer: {
+        justifyContent: 'center',
+        alignItems: 'center',
     },
 });
