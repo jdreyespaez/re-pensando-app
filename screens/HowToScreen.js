@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { Constants } from 'expo';
 
 export default class HowToScreen extends React.Component {
@@ -9,6 +9,10 @@ export default class HowToScreen extends React.Component {
 
     onPressSiguiente = () => {
         this.props.navigation.push('HowToScreen');
+    };
+
+    onPressAtras = () => {
+        this.props.navigation.push('CongratsScreen');
     };
 
     render() {
@@ -54,13 +58,13 @@ export default class HowToScreen extends React.Component {
                             resizeMode="contain"
                         />
                     </View>
-                    <View style={styles.dotsContainer}>
+                    <TouchableOpacity style={styles.dotsContainer}>
                         <Image
                             source={require('../assets/dosDeDos.png')}
-                            onPress={this.onPressSiguiente}
+                            onPress={this.onPressAtras}
                             resizeMode="contain"
                         />
-                    </View>
+                    </TouchableOpacity>
                 </View>
             </ScrollView>
         )
@@ -102,6 +106,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         marginTop: 20,
+        marginBottom: 40,
     },
     imageContainer: {
         justifyContent: 'center',
