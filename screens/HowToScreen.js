@@ -32,12 +32,20 @@ export default class HowToScreen extends React.Component {
                                 resizeMode="contain"
                             />
                         </View>
+                        <Text style={styles.text}>
+                            4. Si registras tu basura mínimo tres días a la semana se habilitará una sección de la historia gráfica <Text style={{fontWeight: 'bold'}}>“INSINUACIÓN”</Text>.{"\n"}
+                        </Text>
+                        <View style={styles.imageContainer}>
+                            <Image
+                                source={require('../assets/HowTo_historiaEjemplo.png')}
+                                resizeMode="contain"
+                            />
+                        </View>
                     </View>
                     <View style={styles.imageContainer}>
-                        <Image
-                            source={require('../assets/felicitaciones.png')}
-                            resizeMode="contain"
-                        />
+                        <Text style={{fontSize: 20, fontWeight: 'bold'}}>
+                        Registrar
+                        </Text>
                     </View>
                     <View style={styles.dotsContainer}>
                         <Image
