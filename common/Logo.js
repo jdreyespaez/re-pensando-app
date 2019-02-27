@@ -6,8 +6,10 @@ export default class Logo extends React.Component {
         return (
             <View style={styles.container}>
                 <Image
+                    style={{flex: 1,
+                        width: '100%',
+                        }}
                     source={require('../assets/icon.png')}
-                    resizeMode="contain"
                 />
             </View>
         )
@@ -16,8 +18,12 @@ export default class Logo extends React.Component {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        marginTop: 100,
+        width: 250, 
+        height: 250, 
+        //backgroundColor: 'powderblue',
+        alignSelf: 'center',
         justifyContent: 'center',
-        alignItems: 'center',
+        //alignItems: 'center',
     }
 });
