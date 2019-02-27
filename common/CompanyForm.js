@@ -64,7 +64,10 @@ export default class Regform extends React.Component {
                             }
                         >
                             <Picker.Item label="Empleado profesional" value="empleado-profesional" />
-                            <Picker.Item label="Gerente" value="gerente" />
+                            <Picker.Item label="Empleado área seguridad" value="Empleado área seguridad" />
+                            <Picker.Item label="Empleado área administrativa" value="Empleado área administrativa" />
+                            <Picker.Item label="Empleado área de aseo" value="Empleado área de aseo" />
+                            <Picker.Item label="Otro" value="Otro" />
                         </Picker>
                     </View>
                     <View style={styles.inputContainer}>
