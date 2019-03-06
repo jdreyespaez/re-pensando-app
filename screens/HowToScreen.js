@@ -15,6 +15,10 @@ export default class HowToScreen extends React.Component {
     this.props.navigation.push("CongratsScreen");
   };
 
+  onPressHome = () => {
+    this.props.navigations.push("Home");
+  };
+
   render() {
     return (
       <ScrollView>
@@ -56,9 +60,13 @@ export default class HowToScreen extends React.Component {
               />
             </View>
           </View>
-          <View style={styles.imageContainer}>
-            <Text style={{ fontSize: 20, fontWeight: "bold" }}>Registrar</Text>
-          </View>
+          <TouchableOpacity onPress={this.onPressHome}>
+            <View style={styles.imageContainer}>
+              <Text style={{ fontSize: 20, fontWeight: "bold" }}>
+                Registrar
+              </Text>
+            </View>
+          </TouchableOpacity>
           <View style={styles.dotsContainer}>
             <Image
               source={require("../assets/masmas.png")}
