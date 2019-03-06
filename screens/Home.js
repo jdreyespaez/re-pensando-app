@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 
-class HomeScreen extends React.Component {
+class Home extends React.Component {
   render() {
     return (
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
@@ -17,4 +17,4 @@ class HomeScreen extends React.Component {
   }
 }
 
-export default HomeScreen;
+export default Home;
