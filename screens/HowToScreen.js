@@ -8,15 +8,11 @@ export default class HowToScreen extends React.Component {
   };
 
   onPressSiguiente = () => {
-    this.props.navigation.push("HowToScreen");
+    this.props.navigation.push("Home");
   };
 
   onPressAtras = () => {
     this.props.navigation.push("CongratsScreen");
-  };
-
-  onPressHome = () => {
-    this.props.navigations.push("Home");
   };
 
   render() {
@@ -60,20 +56,21 @@ export default class HowToScreen extends React.Component {
               />
             </View>
           </View>
-          <TouchableOpacity onPress={this.onPressHome}>
+          <TouchableOpacity onPress={this.onPressSiguiente}>
             <View style={styles.imageContainer}>
               <Text style={{ fontSize: 20, fontWeight: "bold" }}>
                 Registrar
               </Text>
             </View>
           </TouchableOpacity>
-          <View style={styles.dotsContainer}>
-            <Image
-              source={require("../assets/masmas.png")}
-              onPress={this.onPressSiguiente}
-              resizeMode="contain"
-            />
-          </View>
+          <TouchableOpacity onPress={this.onPressSiguiente}>
+            <View style={styles.dotsContainer}>
+              <Image
+                source={require("../assets/masmas.png")}
+                resizeMode="contain"
+              />
+            </View>
+          </TouchableOpacity>
           <TouchableOpacity
             onPress={this.onPressAtras}
             style={styles.dotsContainer}
