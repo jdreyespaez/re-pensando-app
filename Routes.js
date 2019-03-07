@@ -26,7 +26,8 @@ const Routes = createStackNavigator(
     initialRouteName: "Home",
     navigationOptions: {
       ...HeaderStyles,
-      animationEnabled: true
+      animationEnabled: true,
+      header: null
     }
   }
 );
