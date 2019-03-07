@@ -27,10 +27,10 @@ class Home extends React.Component {
 
 const TabNavigator = createBottomTabNavigator(
   {
-    User: { screen: UserTab },
-    Add: { screen: AddTab },
-    Stats: { screen: StatsTab },
-    Stories: { screen: StoriesTab }
+    Usuario: { screen: UserTab },
+    Registrar: { screen: AddTab },
+    Estadísticas: { screen: StatsTab },
+    Insinuación: { screen: StoriesTab }
   },
   {
     swipeEnabled: true,
