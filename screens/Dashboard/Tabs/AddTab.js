@@ -17,7 +17,43 @@ export default class CongratsScreen extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.titleContainer}>
-          <Text style={styles.title}>Agrega</Text>
+          <Text style={styles.title}>¿Qué quieres registrar?</Text>
+        </View>
+        <View style={styles.categories}>
+          <View style={styles.categoryContainer}>
+            <View style={styles.category}>
+              <Image
+                style={styles.categoryImage}
+                source={require("../../../assets/categories/empaques_de_comida.png")}
+              />
+            </View>
+          </View>
+          <View style={styles.categoryContainer}>
+            <View style={styles.category}>
+              <Image
+                style={styles.categoryImage}
+                source={require("../../../assets/categories/comida.png")}
+              />
+            </View>
+          </View>
+          <View style={styles.categoryContainer}>
+            <View style={styles.category} />
+          </View>
+          <View style={styles.categoryContainer}>
+            <View style={styles.category} />
+          </View>
+          <View style={styles.categoryContainer}>
+            <View style={styles.category} />
+          </View>
+          <View style={styles.categoryContainer}>
+            <View style={styles.category} />
+          </View>
+          <View style={styles.categoryContainer}>
+            <View style={styles.category} />
+          </View>
+          <View style={styles.categoryContainer}>
+            <View style={styles.category} />
+          </View>
         </View>
       </View>
     );
@@ -26,18 +62,41 @@ export default class CongratsScreen extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: "center",
-    paddingTop: Constants.statusBarHeight,
-    padding: 8
+    flex: 1
+    // justifyContent: "center",
+    // paddingTop: Constants.statusBarHeight,
+    // padding: 8
   },
   titleContainer: {
-    margin: 40
+    height: "15%",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#fff"
   },
   title: {
-    fontSize: 35,
+    fontSize: 25,
     fontWeight: "bold",
     color: "#e02c2c",
     textAlign: "center"
+  },
+  categories: {
+    height: "85%",
+    backgroundColor: "#000",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    padding: 5
+  },
+  categoryContainer: {
+    width: "50%",
+    height: "20%",
+    padding: 5
+  },
+  category: {
+    flex: 1,
+    backgroundColor: "orange"
+  },
+  categoryImage: {
+    width: "100%",
+    height: "100%"
   }
 });
