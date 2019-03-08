@@ -37,19 +37,44 @@ export default class CongratsScreen extends React.Component {
             </View>
           </View>
           <View style={styles.categoryContainer}>
-            <View style={styles.category} />
+            <View style={styles.category}>
+              <Image
+                style={styles.categoryImage}
+                source={require("../../../assets/categories/envases_liquidos.png")}
+              />
+            </View>
           </View>
           <View style={styles.categoryContainer}>
-            <View style={styles.category} />
+            <View style={styles.category}>
+              <Image
+                style={styles.categoryImage}
+                source={require("../../../assets/categories/envases_liquidos.png")}
+              />
+            </View>
           </View>
           <View style={styles.categoryContainer}>
-            <View style={styles.category} />
+            <View style={styles.category}>
+              <Image
+                style={styles.categoryImage}
+                source={require("../../../assets/categories/carton_papel.png")}
+              />
+            </View>
           </View>
           <View style={styles.categoryContainer}>
-            <View style={styles.category} />
+            <View style={styles.category}>
+              <Image
+                style={styles.categoryImage}
+                source={require("../../../assets/categories/plastico_icopor.png")}
+              />
+            </View>
           </View>
           <View style={styles.categoryContainer}>
-            <View style={styles.category} />
+            <View style={styles.category}>
+              <Image
+                style={styles.categoryImage}
+                source={require("../../../assets/categories/pilas.png")}
+              />
+            </View>
           </View>
           <View style={styles.categoryContainer}>
             <View style={styles.category} />
@@ -81,7 +106,7 @@ const styles = StyleSheet.create({
   },
   categories: {
     height: "85%",
-    backgroundColor: "#000",
+    backgroundColor: "#fff",
     flexDirection: "row",
     flexWrap: "wrap",
     padding: 5
