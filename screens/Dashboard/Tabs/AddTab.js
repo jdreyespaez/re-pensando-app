@@ -77,7 +77,10 @@ export default class CongratsScreen extends React.Component {
             </View>
           </View>
           <View style={styles.categoryContainer}>
-            <View style={styles.category} />
+            <Image
+              style={styles.categoryImage}
+              source={require("../../../assets/categories/agregar_otro.png")}
+            />
           </View>
         </View>
       </View>
@@ -118,7 +121,7 @@ const styles = StyleSheet.create({
   },
   category: {
     flex: 1,
-    backgroundColor: "orange"
+    backgroundColor: "#fff"
   },
   categoryImage: {
     width: "100%",
