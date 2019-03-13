@@ -8,7 +8,7 @@ export default class CongratsScreen extends React.Component {
     tabBarIcon: ({ tintColor }) => (
       <Image
         source={require("../../../assets/tabNavigator/storiesTabIcon.png")}
-        style={{ width: 22, height: 22, tintColor: "#ffffff" }}
+        style={{ width: 40, height: 25, tintColor: "#ffffff" }}
       />
     )
   };
