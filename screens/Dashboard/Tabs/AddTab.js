@@ -48,7 +48,7 @@ export default class CongratsScreen extends React.Component {
             <View style={styles.category}>
               <Image
                 style={styles.categoryImage}
-                source={require("../../../assets/categories/envases_liquidos.png")}
+                source={require("../../../assets/categories/ropa_zapatos_telas.png")}
               />
             </View>
           </View>
