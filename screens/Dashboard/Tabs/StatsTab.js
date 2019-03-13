@@ -5,6 +5,7 @@ import { Constants } from "expo";
 export default class CongratsScreen extends React.Component {
   static navigationOptions = {
     header: null,
+    headerMode: "none",
     tabBarIcon: ({ tintColor }) => (
       <Image
         source={require("../../../assets/tabNavigator/statsTabIcon.png")}

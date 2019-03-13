@@ -6,24 +6,25 @@ import AddTab from "./Dashboard/Tabs/AddTab";
 import StatsTab from "./Dashboard/Tabs/StatsTab";
 import StoriesTab from "./Dashboard/Tabs/StoriesTab";
 
-class Home extends React.Component {
-  static navigationOptions = {
-    header: null
-  };
-  render() {
-    return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <Text>Home!</Text>
-        <TouchableOpacity
-          raised
-          onPress={() => this.props.navigation.navigate("Dashboard")}
-        >
-          <Text>Get Started!</Text>
-        </TouchableOpacity>
-      </View>
-    );
-  }
-}
+// class Home extends React.Component {
+//   static navigationOptions = {
+//     header: null,
+//     headerMode: "none"
+//   };
+//   render() {
+//     return (
+//       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+//         <Text>Home!</Text>
+//         <TouchableOpacity
+//           raised
+//           onPress={() => this.props.navigation.navigate("Dashboard")}
+//         >
+//           <Text>Get Started!</Text>
+//         </TouchableOpacity>
+//       </View>
+//     );
+//   }
+// }
 
 const TabNavigator = createBottomTabNavigator(
   {
@@ -33,6 +34,7 @@ const TabNavigator = createBottomTabNavigator(
     Insinuación: { screen: StoriesTab }
   },
   {
+    header: null,
     swipeEnabled: true,
     tabBarOptions: {
       activeTintColor: "#ffffff",
