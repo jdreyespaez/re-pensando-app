@@ -14,6 +14,10 @@ export default class CongratsScreen extends React.Component {
     )
   };
 
+  onPressEmpaquesComida = () => {
+    this.props.navigation.push("EmpaquesComida");
+  };
+
   render() {
     return (
       <View style={styles.container}>
@@ -23,10 +27,12 @@ export default class CongratsScreen extends React.Component {
         <View style={styles.categories}>
           <View style={styles.categoryContainer}>
             <View style={styles.category}>
-              <Image
-                style={styles.categoryImage}
-                source={require("../../../assets/categories/empaques_de_comida.png")}
-              />
+              <TouchableOpacity onPress={this.onPressEmpaquesComida}>
+                <Image
+                  style={styles.categoryImage}
+                  source={require("../../../assets/categories/empaques_de_comida.png")}
+                />
+              </TouchableOpacity>
             </View>
           </View>
           <View style={styles.categoryContainer}>
