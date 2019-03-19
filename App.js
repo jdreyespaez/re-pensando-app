@@ -2,6 +2,7 @@ import * as React from "react";
 import { Text, View, StyleSheet, Image, Button } from "react-native";
 import { Constants, Font } from "expo";
 import { createStackNavigator, createAppContainer } from "react-navigation";
+import firebase from "firebase";
 import RegisterScreen from "./screens/RegisterScreen";
 import CompanyScreen from "./screens/CompanyScreen";
 import SchoolScreen from "./screens/SchoolScreen";
