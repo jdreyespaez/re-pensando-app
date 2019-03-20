@@ -16,7 +16,8 @@ export default class Regform extends React.Component {
     super();
     this.state = {
       PickerValue: "",
-      name: ""
+      name: "",
+      password: ""
     };
   }
   render() {
@@ -30,6 +31,15 @@ export default class Regform extends React.Component {
               label="Nombre FB"
               value={this.state.name}
               onChangeText={name => this.setState({ name })}
+            />
+          </View>
+          <View style={styles.inputContainer}>
+            <Input
+              secureTextEntry
+              placeholder="Tu pass para Firebase"
+              label="Password FB"
+              value={this.state.password}
+              onChangeText={password => this.setState({ password })}
             />
           </View>
           <View style={styles.inputContainer}>
