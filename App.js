@@ -13,6 +13,16 @@ import Logo from "./common/Logo";
 import EmpaquesComida from "./screens/Categories/EmpaquesComida";
 
 class LoginScreen extends React.Component {
+  componentWillMount() {
+    firebase.initializeApp({
+      apiKey: "AIzaSyCO54nG_Q0JTbHxhK4fvh1Z0JrFvZWAoZk",
+      authDomain: "auth-reapp.firebaseapp.com",
+      databaseURL: "https://auth-reapp.firebaseio.com",
+      projectId: "auth-reapp",
+      storageBucket: "auth-reapp.appspot.com",
+      messagingSenderId: "791621201484"
+    });
+  }
   static navigationOptions = {
     header: null
   };
