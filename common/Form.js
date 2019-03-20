@@ -16,7 +16,7 @@ export default class Regform extends React.Component {
     super();
     this.state = {
       PickerValue: "",
-      name: "",
+      email: "",
       password: ""
     };
   }
@@ -27,10 +27,10 @@ export default class Regform extends React.Component {
         <ScrollView>
           <View style={styles.inputContainer}>
             <Input
-              placeholder="Tu nombre para Firebase"
-              label="Nombre FB"
-              value={this.state.name}
-              onChangeText={name => this.setState({ name })}
+              placeholder="Tu email para Firebase"
+              label="Email FB"
+              value={this.state.email}
+              onChangeText={email => this.setState({ email })}
             />
           </View>
           <View style={styles.inputContainer}>
