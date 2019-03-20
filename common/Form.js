@@ -8,15 +8,15 @@ import {
   Picker,
   ScrollView
 } from "react-native";
+import Input from "./Input";
 
 export default class Regform extends React.Component {
   // Aquí es donde definiremos el State de este componente
-  state = { text: "" };
-
   constructor() {
     super();
     this.state = {
-      PickerValue: ""
+      PickerValue: "",
+      text: ""
     };
   }
   render() {
@@ -24,6 +24,12 @@ export default class Regform extends React.Component {
       <View style={styles.regform}>
         <Text style={styles.header}>Colegio</Text>
         <ScrollView>
+          <View style={styles.inputContainer}>
+            <Input
+              value={this.state.text}
+              onChangeText={text => this.setState({ text })}
+            />
+          </View>
           <View style={styles.inputContainer}>
             <Text style={styles.inputTitle}>NOMBRE COLEGIO</Text>
             <TextInput
@@ -35,8 +41,6 @@ export default class Regform extends React.Component {
           <View style={styles.inputContainer}>
             <Text style={styles.inputTitle}>NOMBRES</Text>
             <TextInput
-              value={this.state.text}
-              onChangeText={text => this.setState({ text: text })}
               style={styles.textInput}
               keyboardType="default"
               placeholder="¿Cuáles son tus nombres?"
