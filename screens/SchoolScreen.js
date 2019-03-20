@@ -37,17 +37,28 @@ export default class SchoolScreen extends React.Component {
 
 		this.setState({ error: '', loading: true });
 
-		firebase
-			.auth().signInWithEmailAndPassword(email, password)
+		firebase.auth().signInWithEmailAndPassword(email, password)
+			.then(this.onLoginSuccess.bind(this))
 			.catch(() => {
-				firebase
-					.auth().createUserWithEmailAndPassword(email, password)
-					.catch(() => {
-						this.setState({ error: "La autenticación falló." });
-					});
+				firebase.auth().createUserWithEmailAndPassword(email, password)
+					.then(this.onLoginSuccess.bind(this))
+					.catch(this.onLoginFail.bind(this));
 			});
-		this.props.navigation.push("CongratsScreen");
+		// this.props.navigation.push("CongratsScreen");
 	};
+
+	onLoginFail() {
+		this.setState({ error: "La autenticación falló.", loading: false });
+	}
+
+	onLoginSuccess() {
+		this.setState({
+			email: '',
+			password: '',
+			loading: false,
+			error: '',
+		});
+	}
 
 	renderBoton() {
 		if (this.state.loading) {
