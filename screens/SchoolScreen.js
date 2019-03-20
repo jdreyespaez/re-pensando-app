@@ -31,13 +31,13 @@ export default class SchoolScreen extends React.Component {
   onPressGuardar = () => {
     const { email, password } = this.state;
 
+    this.setState({ error: "" });
+
     firebase
-      .auth()
-      .signInWithEmailAndPassword(email, password)
+      .auth().signInWithEmailAndPassword(email, password)
       .catch(() => {
         firebase
-          .auth()
-          .createUserWithEmailAndPassword(email, password)
+          .auth().createUserWithEmailAndPassword(email, password)
           .catch(() => {
             this.setState({ error: "La autenticación falló." });
           });
