@@ -26,6 +26,7 @@ export default class Regform extends React.Component {
         <ScrollView>
           <View style={styles.inputContainer}>
             <Input
+              label="Nombre FB"
               value={this.state.text}
               onChangeText={text => this.setState({ text })}
             />
