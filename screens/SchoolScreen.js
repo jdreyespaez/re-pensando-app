@@ -11,9 +11,9 @@ export default class SchoolScreen extends React.Component {
   };
 
   onPressGuardar = () => {
-    const { name, password } = this.state;
+    const { email, password } = this.state;
 
-    firebase.auth().signInWithEmailAndPassword(name, password);
+    firebase.auth().signInWithEmailAndPassword(email, password);
     this.props.navigation.push("CongratsScreen");
   };
 
