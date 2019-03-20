@@ -1,12 +1,13 @@
 import React from "react";
 import { TextInput, View, Text, StyleSheet } from "react-native";
-import { blue } from "ansi-colors";
 
-const Input = ({ label, value, onChangeText }) => {
+const Input = ({ label, value, onChangeText, placeholder }) => {
   return (
     <View>
       <Text style={styles.labelStyle}>{label}</Text>
       <TextInput
+        placeholder={placeholder}
+        autoCorrect={false}
         value={value}
         onChangeText={onChangeText}
         style={styles.labelStyle}
