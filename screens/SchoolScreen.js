@@ -100,9 +100,13 @@ export default class SchoolScreen extends React.Component {
 	renderContent() {
 		switch (this.state.loggedIn) {
 			case true:
-				return <Boton>Salir!!</Boton>
+				return (
+					<Boton onPress={() => firebase.auth().signOut()}>
+						Salir!!
+					</Boton>
+				)
 			case false:
-				return <Text>School Form</Text>
+				return <Text>No autenticado</Text>
 			default:
 				return <Spinner size='large' />
 		}
