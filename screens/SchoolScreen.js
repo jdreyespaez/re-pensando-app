@@ -98,18 +98,14 @@ export default class SchoolScreen extends React.Component {
 	// Con esta helper function se crea una regla para mostrar una parte del 
 	// contenido o no mostrarlo.
 	renderContent() {
-		if (this.state.loggedIn) {
-			return (
-				<Boton style={styles.btn}>
-					Salir!!
-      </Boton>
-			);
+		switch (this.state.loggedIn) {
+			case true:
+				return <Boton>Salir!!</Boton>
+			case false:
+				return <Text>School Form</Text>
+			default:
+				return <Spinner size='large' />
 		}
-		return (
-			<Text>
-				No está autenticado
-	    </Text>
-		);
 	}
 
 	render() {
