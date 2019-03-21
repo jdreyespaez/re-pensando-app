@@ -14,8 +14,31 @@ import Boton from "../common/Boton";
 import Input from "../common/Input";
 import Spinner from '../common/Spinner';
 
-
 export default class SchoolScreen extends React.Component {
+
+	// Moviendo la autenticación a la pantalla de registro para Colegios
+	state = { loggedIn: false };
+
+	componentWillMount() {
+		firebase.initializeApp({
+			apiKey: "AIzaSyCO54nG_Q0JTbHxhK4fvh1Z0JrFvZWAoZk",
+			authDomain: "auth-reapp.firebaseapp.com",
+			databaseURL: "https://auth-reapp.firebaseio.com",
+			projectId: "auth-reapp",
+			storageBucket: "auth-reapp.appspot.com",
+			messagingSenderId: "791621201484"
+		});
+
+		firebase.auth().onAuthStateChanged((user) => {
+			if (user) {
+				this.setState({ loggedIn: true });
+			} else {
+				this.setState({ loggedIn: false });
+			}
+		});
+
+	}
+
 	static navigationOptions = {
 		header: null
 	};
@@ -68,7 +91,24 @@ export default class SchoolScreen extends React.Component {
 		return (
 			<Boton style={styles.btn} onPress={this.onPressGuardar}>
 				Guardar
+			</Boton>
+		);
+	}
+
+	// Con esta helper function se crea una regla para mostrar una parte del 
+	// contenido o no mostrarlo.
+	renderContent() {
+		if (this.state.loggedIn) {
+			return (
+				<Boton style={styles.btn}>
+					Salir!!
       </Boton>
+			);
+		}
+		return (
+			<Text>
+				No está autenticado
+	    </Text>
 		);
 	}
 
@@ -96,7 +136,10 @@ export default class SchoolScreen extends React.Component {
 									onChangeText={password => this.setState({ password })}
 								/>
 							</View>
-							<Text style={styles.errorText}>{this.state.error}</Text>
+							<Text style={styles.errorText}>
+								{this.state.error}
+							</Text>
+							{this.renderContent()}
 							<View style={styles.inputContainer}>
 								<Text style={styles.inputTitle}>NOMBRE COLEGIO</Text>
 								<TextInput

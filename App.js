@@ -2,7 +2,6 @@ import * as React from "react";
 import { Text, View, StyleSheet, Image, Button } from "react-native";
 import { Constants, Font } from "expo";
 import { createStackNavigator, createAppContainer } from "react-navigation";
-import firebase from "firebase";
 import RegisterScreen from "./screens/RegisterScreen";
 import CompanyScreen from "./screens/CompanyScreen";
 import SchoolScreen from "./screens/SchoolScreen";
@@ -13,16 +12,27 @@ import Logo from "./common/Logo";
 import EmpaquesComida from "./screens/Categories/EmpaquesComida";
 
 class LoginScreen extends React.Component {
-  componentWillMount() {
-    firebase.initializeApp({
-      apiKey: "AIzaSyCO54nG_Q0JTbHxhK4fvh1Z0JrFvZWAoZk",
-      authDomain: "auth-reapp.firebaseapp.com",
-      databaseURL: "https://auth-reapp.firebaseio.com",
-      projectId: "auth-reapp",
-      storageBucket: "auth-reapp.appspot.com",
-      messagingSenderId: "791621201484"
-    });
-  }
+  // state = { loggedIn: false };
+
+  // componentWillMount() {
+  //   firebase.initializeApp({
+  //     apiKey: "AIzaSyCO54nG_Q0JTbHxhK4fvh1Z0JrFvZWAoZk",
+  //     authDomain: "auth-reapp.firebaseapp.com",
+  //     databaseURL: "https://auth-reapp.firebaseio.com",
+  //     projectId: "auth-reapp",
+  //     storageBucket: "auth-reapp.appspot.com",
+  //     messagingSenderId: "791621201484"
+  //   });
+
+  //   firebase.auth().onAuthStateChanged((user) => {
+  //     if (user) {
+  //       this.setState({ loggedIn: true });
+  //     } else {
+  //       this.setState({ loggedIn: false });
+  //     }
+  //   });
+
+  // }
   static navigationOptions = {
     header: null
   };
@@ -30,6 +40,23 @@ class LoginScreen extends React.Component {
   onPress = () => {
     this.props.navigation.push("RegisterScreen");
   };
+
+  // // Con esta helper function se crea una regla para mostrar una parte del 
+  // // contenido o no mostrarlo.
+  // renderContent() {
+  //   if (this.state.loggedIn) {
+  //     return (
+  //       <Button>
+  //         Salir!!!
+  //       </Button>
+  //     );
+  //   }
+  //   return (
+  //     <Text>
+  //       No está autenticado
+  //     </Text>
+  //   );
+  // }
 
   render() {
     return (
@@ -47,6 +74,7 @@ class LoginScreen extends React.Component {
           </Text>
           <View style={styles.buttonContainer}>
             <Button title="Regístrate" color="#D70026" onPress={this.onPress} />
+            {/* {this.renderContent()} */}
           </View>
         </View>
       </View>
