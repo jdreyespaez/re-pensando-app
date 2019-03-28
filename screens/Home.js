@@ -28,8 +28,8 @@ import StoriesTab from "./Dashboard/Tabs/StoriesTab";
 
 const TabNavigator = createBottomTabNavigator(
   {
-    Usuario: { screen: UserTab },
     Registrar: { screen: AddTab },
+    Usuario: { screen: UserTab },
     Estadísticas: { screen: StatsTab },
     Insinuación: { screen: StoriesTab }
   },
