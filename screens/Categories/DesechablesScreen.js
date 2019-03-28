@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import { Constants } from "expo";
 
-export default class EmpaquesComida extends React.Component {
+export default class DesechablesScreen extends React.Component {
   static navigationOptions = {
     header: null,
     headerMode: "none",
@@ -14,39 +14,18 @@ export default class EmpaquesComida extends React.Component {
     )
   };
 
-  onPressSiguiente = () => {
-    this.props.navigation.push("HowToScreen");
-  };
-
-  onPressDesechables = () => {
-    this.props.navigation.push('DesechablesScreen');
-  };
 
   render() {
     return (
       <ScrollView>
         <View style={styles.container}>
           <View style={styles.titleContainer}>
-            <Text style={styles.title}>Empaques de comida</Text>
+            <Text style={styles.title}>Desechables</Text>
           </View>
           <View style={styles.subCatContainer}>
-            <TouchableOpacity onPress={this.onPressDesechables}>
-              <Image
-                source={require("../../assets/categories/subCat_desechables.png")}
-                resizeMode="contain"
-                style={styles.subCatImg}
-              />
-            </TouchableOpacity>
-            <Image
-              source={require("../../assets/categories/subCat_paquetesComida.png")}
-              resizeMode="contain"
-              style={styles.subCatImg}
-            />
+
           </View>
-          <TouchableOpacity
-            style={styles.dotsContainer}
-            onPress={this.onPressSiguiente}
-          />
+
         </View>
       </ScrollView>
     );
@@ -77,12 +56,4 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center"
   },
-  subCatContainer: {
-    justifyContent: "center",
-    alignItems: "center"
-  },
-  subCatImg: {
-    marginTop: 20,
-    marginBottom: 30
-  }
 });

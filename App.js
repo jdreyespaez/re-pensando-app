@@ -10,6 +10,8 @@ import HowToScreen from "./screens/HowToScreen";
 import Home from "./screens/Home";
 import Logo from "./common/Logo";
 import EmpaquesComida from "./screens/Categories/EmpaquesComida";
+import DesechablesScreen from "./screens/Categories/DesechablesScreen";
+
 
 class LoginScreen extends React.Component {
   // state = { loggedIn: false };
@@ -100,7 +102,8 @@ const MainStackNavigator = createStackNavigator({
   CongratsScreen,
   HowToScreen,
   Home,
-  EmpaquesComida
+  EmpaquesComida,
+  DesechablesScreen,
 });
 
 // Link the back button on Android and manage the environment.
