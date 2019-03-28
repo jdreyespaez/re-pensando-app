@@ -67,7 +67,7 @@ export default class SchoolScreen extends React.Component {
 					.then(this.onLoginSuccess.bind(this))
 					.catch(this.onLoginFail.bind(this));
 			});
-		// this.props.navigation.push("CongratsScreen");
+		this.props.navigation.push("CongratsScreen");
 	};
 
 	onLoginFail() {

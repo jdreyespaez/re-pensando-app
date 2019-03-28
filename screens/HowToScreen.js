@@ -71,7 +71,7 @@ export default class HowToScreen extends React.Component {
               />
             </View>
           </TouchableOpacity>
-          <TouchableOpacity
+          {/* <TouchableOpacity
             onPress={this.onPressAtras}
             style={styles.dotsContainer}
           >
@@ -79,7 +79,7 @@ export default class HowToScreen extends React.Component {
               source={require("../assets/dosDeDos.png")}
               resizeMode="contain"
             />
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </View>
       </ScrollView>
     );

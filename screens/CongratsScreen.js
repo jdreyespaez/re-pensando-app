@@ -1,6 +1,8 @@
 import React from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import { Constants } from "expo";
+import Boton from "../common/Boton";
+
 
 export default class CongratsScreen extends React.Component {
   static navigationOptions = {
@@ -36,7 +38,7 @@ export default class CongratsScreen extends React.Component {
               <Text style={{ textAlign: "center" }}>¡No te lo pierdas!</Text>
             </Text>
           </View>
-          <TouchableOpacity
+          {/* <TouchableOpacity
             style={styles.dotsContainer}
             onPress={this.onPressSiguiente}
           >
@@ -44,7 +46,11 @@ export default class CongratsScreen extends React.Component {
               source={require("../assets/unoDeDos.png")}
               resizeMode="contain"
             />
-          </TouchableOpacity>
+          </TouchableOpacity> */}
+          <Boton style={styles.btn} onPress={this.onPressSiguiente}>
+            {" "}
+            ¿Cómo funciona esta app?{" "}
+          </Boton>
         </View>
       </ScrollView>
     );
@@ -86,5 +92,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     marginTop: 20
+  },
+  btn: {
+    margin: 10
   }
 });
