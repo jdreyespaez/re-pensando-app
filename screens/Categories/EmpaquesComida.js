@@ -4,7 +4,14 @@ import { Constants } from "expo";
 
 export default class EmpaquesComida extends React.Component {
   static navigationOptions = {
-    header: null
+    header: null,
+    headerMode: "none",
+    tabBarIcon: ({ tintColor }) => (
+      <Image
+        source={require("../../assets/tabNavigator/addTabIcon.png")}
+        style={{ width: 25, height: 25, tintColor: "#ffffff" }}
+      />
+    )
   };
 
   onPressSiguiente = () => {
@@ -18,17 +25,17 @@ export default class EmpaquesComida extends React.Component {
           <View style={styles.titleContainer}>
             <Text style={styles.title}>Empaques de comida</Text>
           </View>
-          <View style={styles.textContainer}>
-            <Text style={styles.text}>
-              Esta APP es una herramienta interactiva que te va indicar como
-              disponer correctamente tus residuos. {"\n"}
-              {"\n"}
-              Además, a través de ella puedes registrarlos, esto habilitará
-              semanalmente una sección de la atrevida historia gráfica{" "}
-              <Text style={{ fontWeight: "bold" }}>"INSINUACIÓN"</Text>. {"\n"}
-              {"\n"}
-              <Text style={{ textAlign: "center" }}>¡No te lo pierdas!</Text>
-            </Text>
+          <View style={styles.subCatContainer}>
+            <Image
+              source={require("../../assets/categories/subCat_desechables.png")}
+              resizeMode="contain"
+              style={styles.subCatImg}
+            />
+            <Image
+              source={require("../../assets/categories/subCat_paquetesComida.png")}
+              resizeMode="contain"
+              style={styles.subCatImg}
+            />
           </View>
           <TouchableOpacity
             style={styles.dotsContainer}
@@ -64,16 +71,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center"
   },
-  textContainer: {
-    margin: 20
-  },
-  text: {
-    fontSize: 15,
-    color: "black"
-  },
-  dotsContainer: {
+  subCatContainer: {
     justifyContent: "center",
-    alignItems: "center",
-    marginTop: 20
+    alignItems: "center"
+  },
+  subCatImg: {
+    marginTop: 20,
+    marginBottom: 30
   }
 });
