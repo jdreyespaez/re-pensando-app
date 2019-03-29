@@ -20,9 +20,9 @@ export default Slider;
 
 const sytles = StyleSheet.create({
   sliderContainer: {
-    height: 150,
-    width: 150,
-    marginLeft: 20
+    height: 333,
+    width: 333,
+    marginLeft: 10
   },
   sliderImage: {
     flex: 1,
