@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, Image, Dimensions, ScrollView } from "react-native";
 import { Constants } from "expo";
 
 export default class DesechablesScreen extends React.Component {
@@ -14,7 +14,6 @@ export default class DesechablesScreen extends React.Component {
     )
   };
 
-
   render() {
     return (
       <ScrollView>
@@ -22,19 +21,21 @@ export default class DesechablesScreen extends React.Component {
           <View style={styles.titleContainer}>
             <Text style={styles.title}>Desechables</Text>
           </View>
-          <View style={styles.subCatContainer}>
+        </View>
+        <ScrollView
+          scrollEventThrottle={16}
+        >
 
-          </View>
-
+        </ScrollView>
+        <View style={styles.textContainer}>
+          <Text style={styles.text}>
+            Para ayudarte a identificar el material señalado te damos estas imágenes de referencia:
+          </Text>
         </View>
       </ScrollView>
     );
   }
 }
-
-import { useScreens } from "react-native-screens";
-import { ScrollView } from "react-native-gesture-handler";
-useScreens();
 
 const styles = StyleSheet.create({
   container: {
@@ -44,7 +45,7 @@ const styles = StyleSheet.create({
     padding: 8
   },
   titleContainer: {
-    margin: 40
+    margin: 20
   },
   title: {
     fontSize: 25,
@@ -56,4 +57,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center"
   },
+  textContainer: {
+    margin: 20
+  },
+  text: {
+    fontSize: 15,
+    color: "black"
+  }
 });
