@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, Image, Dimensions, ScrollView } from "react-native";
 import { Constants } from "expo";
+import Slider from '../../common/Slider';
 
 export default class DesechablesScreen extends React.Component {
   static navigationOptions = {
@@ -22,15 +23,13 @@ export default class DesechablesScreen extends React.Component {
             <Text style={styles.title}>Desechables</Text>
           </View>
         </View>
-        <ScrollView
-          scrollEventThrottle={16}
-        >
-
-        </ScrollView>
         <View style={styles.textContainer}>
           <Text style={styles.text}>
             Para ayudarte a identificar el material señalado te damos estas imágenes de referencia:
           </Text>
+          <ScrollView scrollEventThrottle={16}>
+            <Slider imageUri={require('../../assets/categories/subCat1_vaso.png')} />
+          </ScrollView>
         </View>
       </ScrollView>
     );
