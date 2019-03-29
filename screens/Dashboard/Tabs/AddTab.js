@@ -79,7 +79,7 @@ export default class CongratsScreen extends React.Component {
             <View style={styles.category}>
               <Image
                 style={styles.categoryImage}
-                source={require("../../../assets/categories/pilas.png")}
+                source={require("../../../assets/categories/pilas_areosoles.png")}
               />
             </View>
           </View>
