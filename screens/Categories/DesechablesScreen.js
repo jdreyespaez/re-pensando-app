@@ -27,8 +27,16 @@ export default class DesechablesScreen extends React.Component {
           <Text style={styles.text}>
             Para ayudarte a identificar el material señalado te damos estas imágenes de referencia:
           </Text>
-          <ScrollView scrollEventThrottle={16}>
-            <Slider imageUri={require('../../assets/categories/subCat1_vaso.png')} />
+          <ScrollView
+            scrollEventThrottle={16}
+            horizontal={true}
+            showsHorizontalScrollIndicator={false}
+          >
+            <Slider imageUri={require('../../assets/categories/subCat1_1caja.png')} />
+            <Slider imageUri={require('../../assets/categories/subCat1_2pitillos.png')} />
+            <Slider imageUri={require('../../assets/categories/subCat1_3cartonDes.png')} />
+            <Slider imageUri={require('../../assets/categories/subCat1_4platosDes.png')} />
+            <Slider imageUri={require('../../assets/categories/subCat1_5cubiertos.png')} />
           </ScrollView>
         </View>
       </ScrollView>
